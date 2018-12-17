@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AHeroCamera();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "View Target")
-		AHeroCamera* ViewTarget;
+		AActor* ViewTarget;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player Controller")
 		APlayerController* PlayerController;

@@ -2,6 +2,8 @@
 
 #include "HeroCamera.h"
 
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values
 AHeroCamera::AHeroCamera()
 {
@@ -15,16 +17,13 @@ void AHeroCamera::BeginPlay()
 {
 	Super::BeginPlay();
 
-	this->PlayerController = this->GetWorld()->GetFirstPlayerController();
-	if (this->PlayerController && this->ViewTarget)
-	{
-		this->PlayerController->SetViewTarget(this->ViewTarget);
-	}
+	APlayerController* p = UGameplayStatics::GetPlayerController(this, 0);
+
+	p->SetViewTarget(ViewTarget);
 }
 
 // Called every frame
 void AHeroCamera::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
