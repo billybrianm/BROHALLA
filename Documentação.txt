@@ -1,0 +1,70 @@
+Personagens:
+- Baiano
+-
+-
+
+Skins:
+- Baiano
++ Baiano paintball
+
+NPCs:
+- Neutros:
++ Mendigo
+
++ Pebas
+
++ Dois caras em uma moto
+
++ Travestis
+
++ Uma mina bêbada e o namorado
+
++ Policial corrupto e traficantes na boca de fumo (BOSS)
+
+
+- Creeps:
++ Ratos
++ Rato ranged com chapéu
++ Rato gordão q cospe (catapa)
+
+- Vendedores:
++ perigo (todo mundo odeia o chris)
+- voice line (me passa um dólar)
++ camelô
+- voice line (crédito ou débito)
+
+Mapa:
+- Lado Esquerdo:
+Spawn:
+SUS
+
+
+
+- Lado Direito:
+Spawn:
+
+
+Mecanica:
+- Talentos
+- Airdrop (sem ser air)
+
+Estruturas:
+- Principais (pra ganhar o jogo)
+Food truck (esquerda)
+Carro de sorvete (direita)
+
+- Torres
+alguma coisa na rua e uma velha em cima do predio tacando pedra
+? maquina de costura
+? um velho na cadeira de rodas kappa
+
+Ambiente:
+urbano
+pós apocaliptico (bolsonaro kappa)
+
+
+Lore:
+No governo do bolsonaro, todo mundo fica loco e os mendigos começam a morar em todos os lugares das ruas. Nossos heróis 
+
+
+
