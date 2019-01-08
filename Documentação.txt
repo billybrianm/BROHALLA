@@ -1,7 +1,10 @@
 Personagens:
 - Baiano
--
--
+- Take
+Ult: Passar dieta
+Seleciona um aliado (inclui self) e da um buff temporario
+
+- 
 
 Skins:
 - Baiano
@@ -9,13 +12,13 @@ Skins:
 
 NPCs:
 - Neutros:
-+ Mendigo
+A + Mendigo
 
-+ Pebas
+B + Pebas
 
-+ Dois caras em uma moto
+C + Dois caras em uma moto
 
-+ Travestis
+D + Travestis
 
 + Uma mina bêbada e o namorado
 
@@ -52,6 +55,7 @@ Estruturas:
 - Principais (pra ganhar o jogo)
 Food truck (esquerda)
 Carro de sorvete (direita)
+O dono do food truck/carro de sorvete protege o nexus
 
 - Torres
 alguma coisa na rua e uma velha em cima do predio tacando pedra

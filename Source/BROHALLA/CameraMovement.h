@@ -26,4 +26,17 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	float Speed = 5;
+
+	UPROPERTY(EditAnywhere)
+	bool paused = false;
+
+	UPROPERTY(EditAnywhere)
+	float percentage = 3.0f;
+	
+private:
+	UPROPERTY()
+	float screenValue;
+
+	UPROPERTY()
+	FVector2D ViewportSize;
 };

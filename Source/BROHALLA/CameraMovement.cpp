@@ -2,6 +2,7 @@
 
 #include "CameraMovement.h"
 #include "Kismet/GameplayStatics.h"
+#include "Engine.h"
 
 // Sets default values for this component's properties
 UCameraMovement::UCameraMovement()
@@ -19,8 +20,9 @@ void UCameraMovement::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	ViewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
 	
+	screenValue = ViewportSize.X * percentage / 100;
 }
 
 
@@ -31,29 +33,34 @@ void UCameraMovement::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 
 	APlayerController* p = UGameplayStatics::GetPlayerController(this, 0);
 
+	p->bShowMouseCursor = true;
+	p->bEnableClickEvents = true;
+	p->bEnableMouseOverEvents = true;
+
 	float x, y;
 
 	p->GetMousePosition(x, y);
 
-	UE_LOG(LogTemp, Warning, TEXT("Teste: %f , %f"), x, y);
-
 	FVector Location = GetOwner()->GetActorLocation();
 	
-	if (x < 50)
+	if (!paused) 
 	{
-		Location -= FVector(Speed * DeltaTime, 0, 0);
-	}
-	if (x > 1000)
-	{
-		Location += FVector(Speed * DeltaTime, 0, 0);
-	}
-	if (y < 50)
-	{
-		Location -= FVector(0, Speed * DeltaTime, 0);
-	}
-	if (y > 550)
-	{
-		Location += FVector(0, Speed * DeltaTime, 0);
+		if (x < screenValue)
+		{
+			Location -= FVector(Speed * DeltaTime, 0, 0);
+		}
+		if (x > ViewportSize.X - screenValue)
+		{
+			Location += FVector(Speed * DeltaTime, 0, 0);
+		}
+		if (y < screenValue)
+		{
+			Location -= FVector(0, Speed * DeltaTime, 0);
+		}
+		if (y > ViewportSize.Y - screenValue)
+		{
+			Location += FVector(0, Speed * DeltaTime, 0);
+		}
 	}
 	GetOwner()->SetActorLocation(Location);
 }
